@@ -3,6 +3,7 @@
     width: 100%;
     max-width: 500px;
     margin: 1rem 1rem;
+    color: var(--text-color);
 }
 
 .itemContent{
@@ -13,7 +14,7 @@
 
 .foodName_price{
     display: flex;
-    border-bottom: 1px dotted black;
+    border-bottom: 1px dotted var(--text-color);
     justify-content: space-between;
     font-size: 1.1rem;
     font-weight: bold;

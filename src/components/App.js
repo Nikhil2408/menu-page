@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import '../styles/App.css';
 import Header from './Header/Header';
 
@@ -82,6 +82,11 @@ const dummy_items = [
 function App() {
 
   const [filteredItemsList, setFilteredItemsList] = useState(dummy_items);
+  const [theme, setTheme] = useState("lightTheme");
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   function onTypeSelect(eventObj){
     if(eventObj.target.innerText === "All"){
@@ -96,8 +101,16 @@ function App() {
     }
   }
 
+  function toggleTheme(){
+    if(theme === "lightTheme")
+      setTheme("darkTheme");
+    else
+      setTheme("lightTheme");
+  }
+
   return (
     <div className="App">
+      <button onClick={toggleTheme} className="toggleTheme">Toggle Theme</button>
       <Header onTypeSelect = {onTypeSelect}/>
       <MenuList foodItemsList = {filteredItemsList}/>
     </div>
