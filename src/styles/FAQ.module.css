@@ -1,0 +1,27 @@
+.FAQ{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.FAQ > button{
+    width: 100%;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.FAQ > div{
+    background-color: grey;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+}
+
+.FAQ > div > p{
+    word-break: break;
+    width: 90%;
+}

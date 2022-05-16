@@ -12,6 +12,7 @@ import item7 from "../assets/item-7.jpeg";
 import item8 from "../assets/item-8.jpeg";
 import item9 from "../assets/item-9.jpeg";
 import MenuList from './Menu/MenuList';
+import FAQsContainer from "./FAQs/FAQsContainer";
 
 const dummy_items = [
   {
@@ -76,6 +77,21 @@ const dummy_items = [
     about: "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.",
     type: "Shakes"
   },
+];
+
+const dummy_faqs = [
+  {
+    question: "What is the meaning of Lorem Ipsum",
+    answer: "Literally it does not mean anything. It is a sequence of words without a sense of Latin derivation that make up a text also known as filler text, fictitious, blind or placeholder"
+  },
+  {
+    question: "Why is Lorem Ipsum used",
+    answer: "The Lorem Ipsum text is used to fill spaces designated to host texts that have not yet been published. They use programmers, graphic designers, typographers to get a real impression of the digital / advertising / editorial product they are working on."
+  },
+  {
+    question: "What is the most used version?",
+    answer: "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  }
 ]
 
 
@@ -113,6 +129,7 @@ function App() {
       <button onClick={toggleTheme} className="toggleTheme">Toggle Theme</button>
       <Header onTypeSelect = {onTypeSelect}/>
       <MenuList foodItemsList = {filteredItemsList}/>
+      <FAQsContainer faqs = {dummy_faqs}/>
     </div>
   );
 }
